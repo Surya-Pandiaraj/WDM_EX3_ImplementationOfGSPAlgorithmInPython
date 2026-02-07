@@ -96,6 +96,31 @@ else:
 <img width="388" height="785" alt="image" src="https://github.com/user-attachments/assets/df978107-2d27-4b7a-9fc2-507dc32e9461" />
 <img width="398" height="760" alt="image" src="https://github.com/user-attachments/assets/fb429c75-3306-4f0a-847f-292e1bf7784d" />
 
+### VISUALIZATION :
+
+```python
+import matplotlib.pyplot as plt
+def visualize_patterns_line(result):
+    if result:
+        patterns = [str(pattern) for pattern in result.keys()]
+        support = list(result.values())
+
+        plt.figure(figsize=(10, 6))
+        plt.plot(patterns, support, marker='o')
+        plt.xlabel('Patterns')
+        plt.ylabel('Support Count')
+        plt.title('Frequent Sequential Patterns')
+        plt.xticks(rotation=90)
+        plt.tight_layout()
+        plt.show()
+    else:
+        print("No frequent sequential patterns found.")
+
+visualize_patterns_line(results)
+```
+
+### OUTPUT :
+<img width="1228" height="726" alt="image" src="https://github.com/user-attachments/assets/f43ba4d0-7b81-4b30-8215-62769ac12d6c" />
 
 ### RESULT :
 The GSP algorithm in python has been successfully implemented.
